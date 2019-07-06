@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PDM.AppCore", "PDM.AppCore\PDM.AppCore.csproj", "{F5EE4264-9C65-49F5-A2B2-F38B7D45A455}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PDM.Models", "PDM.Models\PDM.Models.csproj", "{E6FF0398-8D77-44CC-A842-FAB7434DEC5B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PDM.Repository", "PDM.Repository\PDM.Repository.csproj", "{326C192F-C375-44FD-87E2-16C2AEF863E0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PDM.Services", "PDM.Services\PDM.Services.csproj", "{E5579B55-BA87-4C65-B569-74421B60BE87}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PDM.IRepository", "PDM.IRepository\PDM.IRepository.csproj", "{A5A97480-0572-4FDC-A047-78310576469E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PDM.IServices", "PDM.IServices\PDM.IServices.csproj", "{6268AADB-5F95-48C2-B267-89B6524D231F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tools", "Tools\Tools.csproj", "{FFCE6D37-BB35-4F32-820B-EA9E57D2B89D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5EE4264-9C65-49F5-A2B2-F38B7D45A455}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5EE4264-9C65-49F5-A2B2-F38B7D45A455}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5EE4264-9C65-49F5-A2B2-F38B7D45A455}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5EE4264-9C65-49F5-A2B2-F38B7D45A455}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6FF0398-8D77-44CC-A842-FAB7434DEC5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6FF0398-8D77-44CC-A842-FAB7434DEC5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6FF0398-8D77-44CC-A842-FAB7434DEC5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6FF0398-8D77-44CC-A842-FAB7434DEC5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{326C192F-C375-44FD-87E2-16C2AEF863E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{326C192F-C375-44FD-87E2-16C2AEF863E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{326C192F-C375-44FD-87E2-16C2AEF863E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{326C192F-C375-44FD-87E2-16C2AEF863E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5579B55-BA87-4C65-B569-74421B60BE87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5579B55-BA87-4C65-B569-74421B60BE87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5579B55-BA87-4C65-B569-74421B60BE87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5579B55-BA87-4C65-B569-74421B60BE87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5A97480-0572-4FDC-A047-78310576469E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5A97480-0572-4FDC-A047-78310576469E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5A97480-0572-4FDC-A047-78310576469E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5A97480-0572-4FDC-A047-78310576469E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6268AADB-5F95-48C2-B267-89B6524D231F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6268AADB-5F95-48C2-B267-89B6524D231F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6268AADB-5F95-48C2-B267-89B6524D231F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6268AADB-5F95-48C2-B267-89B6524D231F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFCE6D37-BB35-4F32-820B-EA9E57D2B89D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFCE6D37-BB35-4F32-820B-EA9E57D2B89D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFCE6D37-BB35-4F32-820B-EA9E57D2B89D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFCE6D37-BB35-4F32-820B-EA9E57D2B89D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2759CB7-324A-438C-BEAE-9B11200359CA}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.10.14:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = PDM.AppCore\\PDM.AppCore.csproj
+		SccProjectName1 = PDM.AppCore
+		SccLocalPath1 = PDM.AppCore
+		SccProjectUniqueName2 = PDM.IRepository\\PDM.IRepository.csproj
+		SccProjectName2 = PDM.IRepository
+		SccLocalPath2 = PDM.IRepository
+		SccProjectUniqueName3 = PDM.IServices\\PDM.IServices.csproj
+		SccProjectName3 = PDM.IServices
+		SccLocalPath3 = PDM.IServices
+		SccProjectUniqueName4 = PDM.Models\\PDM.Models.csproj
+		SccProjectName4 = PDM.Models
+		SccLocalPath4 = PDM.Models
+		SccProjectUniqueName5 = PDM.Repository\\PDM.Repository.csproj
+		SccProjectName5 = PDM.Repository
+		SccLocalPath5 = PDM.Repository
+		SccProjectUniqueName6 = PDM.Services\\PDM.Services.csproj
+		SccProjectName6 = PDM.Services
+		SccLocalPath6 = PDM.Services
+		SccProjectUniqueName7 = Tools\\Tools.csproj
+		SccProjectName7 = Tools
+		SccLocalPath7 = Tools
+	EndGlobalSection
+EndGlobal

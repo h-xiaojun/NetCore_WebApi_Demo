@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PDM.AppCore</name>
+    </assembly>
+    <members>
+        <member name="T:PDM.AppCore.Attributes.WebApiResultAttribute">
+            <summary>
+            接口返回协议
+            </summary>
+        </member>
+        <member name="M:PDM.AppCore.Controllers.AccountController.Login(PDM.Models.SysUser)">
+            <summary>
+            登录并获取用信息
+            </summary>
+        </member>
+    </members>
+</doc>
