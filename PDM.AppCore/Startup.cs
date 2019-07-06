@@ -25,9 +25,27 @@ namespace PDM.AppCore
         //配置
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
+
+            #region Cors跨域
+
+            services.AddCors(c =>
+            {
+                c.AddDefaultPolicy(policy => {
+                    policy.WithOrigins(
+                        "http://127.0.0.1:8002"
+                        )
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+                });
+            });
+
+            #endregion
+
             services.AddMvc(options=> {
                 //注册 返回规范的 全局过滤器
                 options.Filters.Add(typeof(WebApiResultAttribute));
+                //异常 过滤器
+                options.Filters.Add<ExceptionFilterAttribute>();
                 options.RespectBrowserAcceptHeader = true;
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             //根目录
@@ -66,9 +84,9 @@ namespace PDM.AppCore
                 var assemblysRepository = Assembly.LoadFrom(repositoryDllFile);
                 builder.RegisterAssemblyTypes(assemblysRepository).AsImplementedInterfaces();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw new Exception("Startup 注册IOC失败");
+                throw new Exception($"Startup 注册IOC失败，{ex.Message}");
             }
 
             //将services填充到Autofac容器生成器中
@@ -87,12 +105,13 @@ namespace PDM.AppCore
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1.0.0/swagger.json", "ApiHelp V1.0.0");
+                });
             }
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1.0.0/swagger.json", "ApiHelp V1.0.0");
-            });
+            app.UseCors();
             app.UseMvc();
         }
     }

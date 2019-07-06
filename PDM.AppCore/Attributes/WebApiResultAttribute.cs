@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using PDM.Models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using PDM.Models;
 
 namespace PDM.AppCore.Attributes
 {
@@ -16,12 +17,12 @@ namespace PDM.AppCore.Attributes
             {
                 var objectResult = context.Result as ObjectResult;
                 if (objectResult.Value == null)
-                    context.Result = new ObjectResult(Result.Fail(404));
+                    context.Result = new ObjectResult(Result.Fail(StatusCodes.Status404NotFound));
                 else
                     context.Result = new ObjectResult(Result.Successful(objectResult.Value));
             }
             else if (context.Result is EmptyResult)
-                context.Result = new ObjectResult(Result.Fail(404));
+                context.Result = new ObjectResult(Result.Fail(StatusCodes.Status404NotFound));
             else if (context.Result is ContentResult)
                 context.Result = new ObjectResult(Result.Successful((context.Result as ContentResult).Content));
             else if (context.Result is StatusCodeResult)

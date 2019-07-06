@@ -4,6 +4,12 @@
         <name>PDM.AppCore</name>
     </assembly>
     <members>
+        <member name="T:PDM.AppCore.Attributes.ExceptionFilterAttribute">
+            <summary>
+            异常 过滤器
+            暂时用这个试试
+            </summary>
+        </member>
         <member name="T:PDM.AppCore.Attributes.WebApiResultAttribute">
             <summary>
             接口返回协议

@@ -15,6 +15,10 @@
     <OutputPath>..\PDM.AppCore\bin\Debug\</OutputPath>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\PDM.AppCore\bin\Release\</OutputPath>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\PDM.IRepository\PDM.IRepository.csproj" />
     <ProjectReference Include="..\PDM.IServices\PDM.IServices.csproj" />

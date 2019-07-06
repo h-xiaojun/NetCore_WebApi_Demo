@@ -13,7 +13,7 @@
         /// <summary>
         /// http状态码
         /// </summary>
-        public int State { get; set; } = 200;
+        public int StatusCode { get; set; } = 200;
 
         /// <summary>
         /// 错误消息
@@ -28,10 +28,10 @@
 
     public class Result
     {
-        public static ResultModel Fail(int state)
+        public static ResultModel Fail(int status)
         {
             string msg = string.Empty;
-            switch (state)
+            switch (status)
             {
                 case 404:
                     msg = "地址错误";
@@ -49,12 +49,19 @@
                     msg = "未知错误";
                     break;
             }
-            return new ResultModel() { State = state, Msg = msg };
+            return Fail(status, msg);
         }
-
+        public static ResultModel Fail(int status, string msg)
+        {
+            return new ResultModel()
+            {
+                StatusCode = status,
+                Msg = msg
+            };
+        }
         public static ResultModel Successful(object value)
         {
-            return new ResultModel() { Data = value, Success = false };
+            return new ResultModel() { Data = value, Success = true };
         }
     }
 }

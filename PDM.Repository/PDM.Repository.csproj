@@ -15,6 +15,10 @@
     <OutputPath>..\PDM.AppCore\bin\Debug\</OutputPath>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\PDM.AppCore\bin\Release\</OutputPath>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="sqlSugarCore" Version="5.0.0.8" />
   </ItemGroup>

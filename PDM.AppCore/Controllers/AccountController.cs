@@ -2,6 +2,7 @@
 using PDM.IServices;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace PDM.AppCore.Controllers
 {
@@ -20,8 +21,11 @@ namespace PDM.AppCore.Controllers
         /// 登录并获取用信息
         /// </summary>
         [HttpPost,Route("Login")]
-        public async Task<SysUser> Login([FromForm] SysUser model)
+        public async Task<SysUser> Login([FromBody] SysUser model)
         {
+            // 这里要不要改成特性验证？
+            if (model.LoginId == null || model.Password == null)
+                throw new Exception("用户名或密码错误!");
             return await this._sysUserService.Login(model);
         }
     }
